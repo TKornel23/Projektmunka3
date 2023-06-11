@@ -107,7 +107,7 @@ def predict():
                 r = {"label": classes[index], "probability": float(preds[0][index])}
                 data["predictions"].append(r)
 
-            data["predictions"] = sorted(data["predictions"], key=lambda d: d['probability'], reverse=True)[:5]
+            
             # # indicate that the request was a success
             data["success"] = True
             data["result"] = classes[np.argmax(preds)]
